@@ -68,6 +68,7 @@ program
   .option('-b, --bail', "bail after first test failure")
   .option('-d, --debug', "enable node's debugger, synonym for node --debug")
   .option('-g, --grep <pattern>', 'only run tests matching <pattern>')
+  .option('-F, --first <pattern>', 'start with first test matching <pattern>')
   .option('-f, --fgrep <string>', 'only run tests containing <string>')
   .option('-gc, --expose-gc', 'expose gc extension')
   .option('-i, --invert', 'inverts --grep and --fgrep matches')
@@ -257,6 +258,10 @@ if (program.grep) mocha.grep(new RegExp(program.grep));
 // --fgrep
 
 if (program.fgrep) mocha.grep(program.fgrep);
+
+// --first
+
+if (program.first) mocha.skipUntil(program.first);
 
 // --invert
 
