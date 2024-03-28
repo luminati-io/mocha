@@ -279,7 +279,7 @@
     "debug": "2.2.0",
     "diff": "1.4.0",
     "escape-string-regexp": "1.0.2",
-    "glob": "3.2.3",
+    "glob": "8.1.0",
     "growl": "1.10.5",
     "jade": "0.26.3",
     "mkdirp": "0.5.1",
